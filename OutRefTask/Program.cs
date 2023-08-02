@@ -4,7 +4,8 @@ using OutRefTask;
 
 int x = 4;
 int y = 5;
-OutRef.swapRef(ref x, ref y);
 Console.WriteLine($" X = {x} and Y = {y}");
-OutRef.swapOut(x, y, out int RX, out int RY);
-Console.WriteLine($" X = {RX} and Y = {RY}");
+OutRef.swapRefOut(ref x, ref y, out int RX, out int RY);
+Console.WriteLine($" X = {x} and Y = {y}");
+Console.WriteLine($" Out of X = {RX} and Y = {RY}");
+

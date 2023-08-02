@@ -8,16 +8,16 @@ namespace OutRefTask
 {
     public static class OutRef
     {
-        public static void swapRef(ref int x, ref int y)
+        public static void swapRefOut(ref int x, ref int y, out int ResultX, out int ResultY)
         {
+            ResultX = x;
+            ResultY = y;
             int z = x;
             x = y;
             y = z;
-        }
-        public static void swapOut(int x, int y, out int ResultX, out int ResultY)
-        {
-            ResultX = y;
-            ResultY = x;
+            z = ResultX;
+            ResultX = ResultY;
+            ResultY = z;
 
         }
     }
